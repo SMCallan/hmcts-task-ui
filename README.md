@@ -1,7 +1,3 @@
-Okay, you definitely need a proper README for the hmcts-task-ui repository. The default Vite one isn't helpful for explaining your project.
-
-Here is a comprehensive README.md tailored for your frontend repository. Replace the entire content of the existing hmcts-task-ui/README.md with this:
-
 # HMCTS Task Management - Frontend UI
 
 ## Project Overview
@@ -104,44 +100,41 @@ This application is deployed to **Netlify**.
 *   Build command: `npm run build`
 *   Publish directory: `dist`
 
-## Project Structure (src folder)
+## Project Structure
+
+The main application code resides within the `src` directory. Key configuration files (`vite.config.ts`, `tsconfig.json`, `jest.config.cjs`, `babel.config.cjs`, `.env`) are in the root.
 content_copy
 download
 Use code with caution.
 Markdown
-'''
-src/
-├── components/ # React UI components
-│ ├── tests/ # Component tests
-│ │ ├── TaskForm.test.tsx
-│ │ └── TaskList.test.tsx
-│ ├── TaskForm.tsx
-│ └── TaskList.tsx
-├── services/ # API interaction logic
-│ └── taskService.ts
-├── App.css # Main application styles
-├── App.tsx # Main application component
-├── index.css # Global styles
-├── main.tsx # Application entry point
-└── vite-env.d.ts # Vite TypeScript environment types
-'''
----
-content_copy
-download
-Use code with caution.
-Action:
-
-Go to your local hmcts-task-ui project directory.
-Open the README.md file.
-Delete the existing content.
-Paste the new content provided above into the file.
-Save README.md.
-Commit and push this change to GitHub:
-git add README.md
-git commit -m "docs: Add comprehensive README for frontend UI"
-git push origin main
-content_copy
-download
-Use code with caution.
-Bash
-Now both your repositories will have informative README files suitable for submission and for anyone else looking at your code.
+hmcts-task-ui/
+├── public/ # Static assets
+├── src/ # Source code
+│ ├── components/ # React UI components
+│ │ ├── tests/ # Component tests
+│ │ │ ├── TaskForm.test.tsx
+│ │ │ └── TaskList.test.tsx
+│ │ ├── TaskForm.tsx
+│ │ └── TaskList.tsx
+│ ├── services/ # API interaction logic
+│ │ └── taskService.ts
+│ ├── assets/ # Images, etc. (e.g., react.svg)
+│ ├── App.css # Main application styles
+│ ├── App.tsx # Main application component
+│ ├── index.css # Global styles / resets
+│ ├── main.tsx # Application entry point (renders App)
+│ └── vite-env.d.ts # Vite TypeScript environment types
+├── .env # Local environment variables (ignored by Git)
+├── .env.example # Example environment variables
+├── .gitignore # Files ignored by Git
+├── babel.config.cjs # Babel config for Jest
+├── index.html # Main HTML entry point (includes <title>)
+├── jest.config.cjs # Jest test runner config
+├── jest.setup.js # Jest setup file (e.g., import jest-dom)
+├── package.json # Project dependencies and scripts
+├── package-lock.json # Dependency lock file
+├── README.md # This file
+├── tsconfig.app.json # TypeScript config for the app
+├── tsconfig.json # Base TypeScript config
+├── tsconfig.node.json # TypeScript config for Node environment (e.g., Vite config)
+└── vite.config.ts # Vite build tool config
