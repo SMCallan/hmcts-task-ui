@@ -103,10 +103,8 @@ This application is deployed to **Netlify**.
 ## Project Structure
 
 The main application code resides within the `src` directory. Key configuration files (`vite.config.ts`, `tsconfig.json`, `jest.config.cjs`, `babel.config.cjs`, `.env`) are in the root.
-content_copy
-download
-Use code with caution.
-Markdown
+
+```
 hmcts-task-ui/
 ├── public/ # Static assets
 ├── src/ # Source code
@@ -138,3 +136,4 @@ hmcts-task-ui/
 ├── tsconfig.json # Base TypeScript config
 ├── tsconfig.node.json # TypeScript config for Node environment (e.g., Vite config)
 └── vite.config.ts # Vite build tool config
+```
